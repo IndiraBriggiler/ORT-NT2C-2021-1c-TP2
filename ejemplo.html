@@ -15,23 +15,21 @@
         "Gabriela",
         "Hugo",
       ];
-      let nombresArray = [];
-      let objeto = {};
 
-      nombres.forEach(function (nombre) {
-        console.log(nombre);
-      });
+      function resultado(nombres) {
+        let arrayResultado = nombres.map((nombre) => {
+          let objeto = {
+            Nombre: nombre,
+            "Longitud:": nombre.length,
+          };
 
-      nombres.map(function hacer(nombre) {
-        objeto = {
-          Nombre: nombre,
-          "Longitud:": nombre.length,
-        };
+          return objeto;
+        });
 
-        nombresArray.push(objeto);
-      });
+        return JSON.stringify(arrayResultado);
+      }
 
-      console.log("RTA:", nombresArray);
+      console.log("RTA:", resultado(nombres));
     </script>
   </body>
 </html>
