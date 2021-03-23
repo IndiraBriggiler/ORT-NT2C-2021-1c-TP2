@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1> Bienvenidos !</h1>
-        <script>
-            console.log("Hola!")
+  <body>
+    <h1>Bienvenidos !</h1>
+    <script>
+      console.log("Hola!");
 
-            let nombres = ['Adriana', 'Benito', 'Claudia', 'Daniel', 'Estefania', 'Fernando','Gabriela','Hugo']
-            nombres.forEach(function(nombre) {
-                console.log(nombre)
-            }
-            )
+      let nombres = [
+        "Adriana",
+        "Benito",
+        "Claudia",
+        "Daniel",
+        "Estefania",
+        "Fernando",
+        "Gabriela",
+        "Hugo",
+      ];
+      let nombresArray = [];
+      let objeto = {};
 
-        </script>
-    </body>
+      nombres.forEach(function (nombre) {
+        console.log(nombre);
+      });
+
+      nombres.map(function hacer(nombre) {
+        objeto = {
+          Nombre: nombre,
+          "Longitud:": nombre.length,
+        };
+
+        nombresArray.push(objeto);
+      });
+
+      console.log("RTA:", nombresArray);
+    </script>
+  </body>
 </html>
