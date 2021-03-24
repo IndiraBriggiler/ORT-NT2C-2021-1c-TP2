@@ -20,16 +20,16 @@
         let arrayResultado = nombres.map((nombre) => {
           let objeto = {
             Nombre: nombre,
-            "Longitud:": nombre.length,
+            Longitud: nombre.length,
           };
 
           return objeto;
         });
 
-        return JSON.stringify(arrayResultado);
+        return arrayResultado;
       }
 
-      console.log("RTA:", resultado(nombres));
+      console.log("RTA:", JSON.stringify(resultado(nombres)));
     </script>
   </body>
 </html>
